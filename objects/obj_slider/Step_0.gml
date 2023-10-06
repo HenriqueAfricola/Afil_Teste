@@ -1,22 +1,22 @@
 if(mouse_check_button(mb_left) && instance_position(mouse_x,mouse_y,all) = id){
 
- slr_clicked = true;
+ Var_Slider_Clicked = true;
 
 }
 
-	if(slr_clicked = true){
+	if(Var_Slider_Clicked = true){
 		
 		
-		if(slr_barx >= slr_bar_posx && slr_barx <= slr_bar_posx + slr_circle_width){
-			slr_barx = mouse_x;
+		if(Var_Slider_Bar_X >= Var_Slider_Bar_Position_X && Var_Slider_Bar_X <= Var_Slider_Bar_Position_X + Var_Slider_Bar_Box_Width){
+			Var_Slider_Bar_X = mouse_x;
 		}
 		
-		if(slr_barx < slr_bar_posx){
-			slr_barx = slr_bar_posx;
+		if(Var_Slider_Bar_X < Var_Slider_Bar_Position_X){
+			Var_Slider_Bar_X = Var_Slider_Bar_Position_X;
 		}
 		
-		if(slr_barx > slr_bar_posx + slr_circle_width){
-			slr_barx = slr_bar_posx + slr_circle_width;
+		if(Var_Slider_Bar_X > Var_Slider_Bar_Position_X + Var_Slider_Bar_Box_Width){
+			Var_Slider_Bar_X = Var_Slider_Bar_Position_X + Var_Slider_Bar_Box_Width;
 		}
 		
 		
@@ -24,11 +24,11 @@ if(mouse_check_button(mb_left) && instance_position(mouse_x,mouse_y,all) = id){
 
 
 if(mouse_check_button_released(mb_left)){
-	slr_clicked = false;
+	Var_Slider_Clicke = false;
 }
 
-slr_percentage = (slr_barx - slr_bar_posx) / slr_circle_width;
-x = slr_barx;
+slr_percentage = (Var_Slider_Bar_X - Var_Slider_Bar_Position_X) / Var_Slider_Bar_Box_Width;
+x = Var_Slider_Bar_X;
 
 
 
